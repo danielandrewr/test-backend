@@ -89,6 +89,10 @@ You can hardcode these values or set them using environment variables.
      - Input features.
    - **Response**: Predicted class.
 
+### 4. `/status` - GET
+    - **Description**: View the model status
+    - **Response**: Model status (has model been trained, best parameters, and training accuracy)
+
 ## Usage
 
 1. **JWT Authentication**:

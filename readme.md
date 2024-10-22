@@ -9,6 +9,7 @@ This backend API is built using **FastAPI** for machine learning model managemen
 - [Environment Variables](#environment-variables)
 - [Endpoints](#endpoints)
 - [Usage](#usage)
+- [Comments](#comments)
 
 ## Features
 - Train machine learning models (e.g., Decision Trees, Random Forest) with hyperparameter tuning using GridSearchCV.
@@ -106,3 +107,14 @@ You can hardcode these values or set them using environment variables.
 
 3. **Predict with a Model**:
    Once the model is trained, you can use the `/predict` endpoint to make predictions.
+
+## Comments
+Initially, I have planned to develop the model and API using FastAPI because like the name suggest it is fast for development and also integration. It really boost the process to train and infer the model. I didn't use Flask because apparently It doesn't work in my machine and outdated. 
+
+I used API-first and modular with an additional emphasis on authentication. The backend was designed as a RESTful API that ensures all functionality is exposed through clearly defined endpoints. It is also broken into distinct modules for authentication (Auth), model manegment (Model), and schemas (Schema) where each module is responsible for handling a specific set of tasks.
+
+The training process, specifically, is managed through a class (Model), which handles tasks such as hyperparameter tuning, model persistence, and prediction. With FastAPI, it allows asynchronous request handling that boost the backend interactions.
+
+For authentication, I used JWT validation to handle unauthorized requests by raising HTTP 401 error whenever the token is invalid or missing. Key configuration option is also set for expiration time and secret key for JWT encoding.
+
+There are a few improvements that can be planned for future, includes model evaluation, model training comparison that allows the user to see the performance in depth, and perhaps better interaction in the frontend application using User Interface components.

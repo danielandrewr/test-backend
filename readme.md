@@ -27,7 +27,7 @@ This backend API is built using **FastAPI** for machine learning model managemen
 
 1. **Clone the repository**:
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/danielandrewr/test-backend.git
     cd backend
     ```
 
